@@ -1,0 +1,14 @@
+version: '2'
+services:
+  db:
+    image: postgres:16
+    user: root
+    environment:
+      - POSTGRES_USER=amaaiza
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=piscineds
+    restart: always      
+    ports:
+      - 5432:5432
+    volumes:
+        - ./postgresql:/var/lib/postgresql/data
